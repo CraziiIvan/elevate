@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
+import SideBar from "@/components/SideBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,8 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.className} bg-gray-1 text-gray-12`}>
-        <Header/>
+      <body
+        className={`${geistSans.className} bg-gray-1 text-gray-12 flex h-dvh flex-col`}
+      >
+        <Header />
+        <SideBar />
         {children}
       </body>
     </html>
