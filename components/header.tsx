@@ -1,6 +1,6 @@
 import Image from "next/image";
-import NavLink from "@/components/NavLink";
-import { Button } from "@/components/ui/Button";
+import NavLink from "@/components/nav-link";
+import { Button } from "@/components/ui/button";
 import headerLogo from "@/public/logo-header.svg";
 
 const navLinks = [

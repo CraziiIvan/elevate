@@ -1,4 +1,4 @@
-import SideBarItem, { icons } from "./SideBarItem";
+import SideBarItem, { icons } from "./side-bar-item";
 
 type TCategorieLink = {
   name: string;

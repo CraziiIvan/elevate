@@ -15,5 +15,12 @@
   --color-gray-11: oklch(76.7% 0 none);
   --color-gray-12: oklch(94.8% 0 none);
 
+  /* Custom font */
   --font-sans: "Geist", sans-serif;
+
+  /* Custom inset shadow */
+  --inset-shadow-icon-top: inset 0 5px 8px rgb(0 0 0 / 0.05);
+  --inset-shadow-icon-bottom: inset 0 -1.5px 8px rgb(0 0 0 / 0.05);
+  --inset-shadow-icon-center: inset 0 0 1px rgb(0 0 0 / 0.05);
+  --inset-shadow-icon-highlight: inset 0 1px rgb(0 0 0 / 0.05);
 }
