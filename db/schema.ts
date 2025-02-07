@@ -9,7 +9,6 @@ import {
   primaryKey,
 } from "drizzle-orm/pg-core";
 
-// 1. Subscribers Table
 export const subscribers = pgTable(
   "subscribers",
   {
@@ -24,7 +23,6 @@ export const subscribers = pgTable(
   }),
 );
 
-// 2. Tools Table (Approved Tools)
 export const tools = pgTable(
   "tools",
   {
@@ -33,7 +31,6 @@ export const tools = pgTable(
     description: varchar("description", { length: 500 }),
     websiteUrl: varchar("website_url", { length: 255 }).notNull().unique(),
     logoUrl: varchar("logo_url", { length: 255 }),
-    pricing: varchar("pricing", { length: 50 }).default("Free"),
     createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true })
       .defaultNow()
@@ -44,7 +41,6 @@ export const tools = pgTable(
   }),
 );
 
-// 3. Submissions Table (Tracks User-Submitted Tools)
 export const submissions = pgTable(
   "submissions",
   {
@@ -72,7 +68,6 @@ export const categories = pgTable(
   }),
 );
 
-// 5. Tags Table
 export const tags = pgTable(
   "tags",
   {
@@ -85,7 +80,6 @@ export const tags = pgTable(
   }),
 );
 
-// 6. Tool Categories (Many-to-Many Relationship)
 export const toolCategories = pgTable(
   "tool_categories",
   {
@@ -105,7 +99,6 @@ export const toolCategories = pgTable(
   }),
 );
 
-// 7. Tool Tags (Many-to-Many Relationship)
 export const toolTags = pgTable(
   "tool_tags",
   {
@@ -122,7 +115,6 @@ export const toolTags = pgTable(
   }),
 );
 
-// 🔹 Define Relations
 export const toolsRelations = relations(tools, ({ many }) => ({
   categories: many(toolCategories),
   tags: many(toolTags),

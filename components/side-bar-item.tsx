@@ -30,7 +30,7 @@ export default function SideBarItem({
   const Icon = icons[iconName];
 
   return (
-    <Link href={path} className="group flex items-center gap-x-2 p-2">
+    <Link href={path} className="group flex items-center gap-x-3 p-2">
       <IconWrapper isActive={isActive}>
         <Icon
           className={cn(
