@@ -1,7 +1,9 @@
+import Hero from "@/components/hero";
+
 export default function Home() {
   return (
-    <div>
-      <main></main>
-    </div>
+    <main className="flex grow flex-col items-center justify-center">
+      <Hero />
+    </main>
   );
 }

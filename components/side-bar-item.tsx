@@ -3,7 +3,13 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Binoculars, Sparkle } from "@phosphor-icons/react/dist/ssr";
+import {
+  Binoculars,
+  Sparkle,
+  Code,
+  Lightning,
+  Palette,
+} from "@phosphor-icons/react/dist/ssr";
 import { cn } from "@/lib/utils";
 import styles from "@/app/styles.module.css";
 
@@ -16,6 +22,9 @@ type TSideBarItemProps = {
 export const icons = {
   Binoculars,
   Sparkle,
+  Code,
+  Lightning,
+  Palette,
 };
 
 export default function SideBarItem({

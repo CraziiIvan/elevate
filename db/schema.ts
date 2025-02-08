@@ -7,6 +7,7 @@ import {
   integer,
   index,
   primaryKey,
+  boolean,
 } from "drizzle-orm/pg-core";
 
 export const subscribers = pgTable(
@@ -31,6 +32,8 @@ export const tools = pgTable(
     description: varchar("description", { length: 500 }),
     websiteUrl: varchar("website_url", { length: 255 }).notNull().unique(),
     logoUrl: varchar("logo_url", { length: 255 }),
+    featured: boolean("featured").default(false),
+    editorChoice: boolean("editor_choice").default(false),
     createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true })
       .defaultNow()

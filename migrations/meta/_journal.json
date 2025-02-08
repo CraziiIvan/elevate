@@ -15,6 +15,13 @@
       "when": 1738910082571,
       "tag": "0001_high_big_bertha",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1738971045642,
+      "tag": "0002_wide_franklin_richards",
+      "breakpoints": true
     }
   ]
 }

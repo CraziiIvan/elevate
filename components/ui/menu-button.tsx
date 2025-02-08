@@ -1,10 +1,11 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useAtom } from "jotai";
+import { mobileMenuAtom } from "@/state/mobile-menu";
 
 const MenuButton = ({ className }: { className?: string }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useAtom(mobileMenuAtom);
 
   return (
     <button
