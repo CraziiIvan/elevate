@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="border-b-gray-3 flex h-13 items-center justify-between border-b px-6 lg:h-14">
+    <header className="border-b-gray-3 bg-gray-1 sticky top-0 z-50 flex h-13 items-center justify-between border-b px-6 lg:h-14">
       <div className="flex items-center gap-x-6">
         <Link href={"/"}>
           <Image src={headerLogo} alt="Elevate" height={16} />
