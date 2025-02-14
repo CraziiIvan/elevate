@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@base-ui-components/react": "^1.0.0-alpha.6",
     "@monokai/monoco-react": "^0.2.2",
     "@neondatabase/serverless": "^0.10.4",
     "@next/env": "^15.1.6",

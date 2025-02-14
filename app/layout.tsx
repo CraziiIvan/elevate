@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header";
 import SideBar from "@/components/side-bar";
+import { ScrollArea } from "@base-ui-components/react/scroll-area";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,11 +16,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-gray-1 text-gray-12 grid h-dvh max-h-dvh grid-cols-1">
+      <body className="bg-gray-1 text-gray-12 h-dvh overflow-y-hidden">
         <Header />
-        <div className="flex">
+        <div className="flex h-full">
           <SideBar />
-          {children}
+          <ScrollArea.Root className="h-[calc(100vh-56px)] flex-1 snap-x scroll-pt-6 overflow-y-scroll scroll-smooth pb-6">
+            <ScrollArea.Viewport>{children}</ScrollArea.Viewport>
+            <ScrollArea.Scrollbar>
+              <ScrollArea.Thumb className="bg-gray-2" />
+            </ScrollArea.Scrollbar>
+            <ScrollArea.Corner />
+          </ScrollArea.Root>
         </div>
       </body>
     </html>

@@ -15,7 +15,7 @@ export default async function Home() {
   const editorChoiceTools = await getEditorChoiceTools();
 
   return (
-    <main className="flex h-full grow flex-col">
+    <main className="flex flex-col">
       <Hero />
       <div className="xs:grid-cols-2 grid grid-cols-1 p-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {featuredTools &&
