@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@monokai/monoco-react": "^0.2.2",
     "@neondatabase/serverless": "^0.10.4",
     "@next/env": "^15.1.6",
     "@phosphor-icons/react": "^2.1.7",

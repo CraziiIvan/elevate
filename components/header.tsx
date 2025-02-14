@@ -24,18 +24,12 @@ export default function Header() {
       <div className="flex items-center gap-x-4">
         <Link
           href={"https://github.com/kaungthantneung"}
-          className="hidden opacity-75 duration-200 ease-out hover:opacity-100 lg:block"
-        >
-          <Image src={githubLogo} alt="Github" height={24} width={24} />
-        </Link>
-        <Link
-          href={"https://github.com/kaungthantneung"}
-          className="opacity-75 duration-200 ease-out hover:opacity-100 lg:hidden"
+          className="opacity-75 duration-200 ease-out hover:opacity-100"
         >
           <Image src={githubLogo} alt="Github" height={20} width={20} />
         </Link>
         <Button variant="outline" className="hidden lg:block">
-          Submit
+          <span className="px-1">Submit</span>
         </Button>
         <MenuButton className="lg:hidden" />
       </div>

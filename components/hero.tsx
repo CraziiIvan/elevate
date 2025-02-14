@@ -13,7 +13,9 @@ export default function Hero() {
       <p className="text-gray-10 text-center sm:text-lg">
         Discover tools that make your tasks easier.
       </p>
-      <Button>Subscribe for free</Button>
+      <Button size="lg">
+        <span className="px-1">Subscribe for free</span>
+      </Button>
     </div>
   );
 }
