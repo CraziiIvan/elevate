@@ -1,9 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import MenuButton from "@/components/ui/menu-button";
 import headerLogo from "@/public/logo-header.svg";
 import githubLogo from "@/public/github.svg";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { useAtom } from "jotai";
+import { headerRefAtom } from "@/state/header";
 
 // const navLinks = [
 //   { name: "Tools", path: "/" },
@@ -11,8 +16,18 @@ import Link from "next/link";
 // ];
 
 export default function Header() {
+  const headerRef = useRef<HTMLElement>(null);
+  const [, setHeaderRef] = useAtom(headerRefAtom);
+
+  useEffect(() => {
+    setHeaderRef(headerRef);
+  }, [setHeaderRef]);
+
   return (
-    <header className="border-b-gray-3 bg-gray-1 sticky top-0 z-50 flex h-13 items-center justify-between border-b px-6 lg:h-14">
+    <header
+      ref={headerRef}
+      className="border-b-gray-3 bg-gray-1 sticky top-0 z-50 flex h-13 items-center justify-between border-b px-6 lg:h-14"
+    >
       <div className="flex items-center gap-x-6">
         <Link href={"/"}>
           <Image src={headerLogo} alt="Elevate" height={16} />
