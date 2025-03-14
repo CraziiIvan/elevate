@@ -31,9 +31,9 @@ export default function SideBar() {
     <aside
       ref={ref}
       className={cn(
-        "border-r-gray-3 h-full w-full max-w-60 flex-1 border-r px-4 py-3 transition-all duration-300 ease-in-out lg:max-w-64",
-        "bg-gray-1 fixed top-13 left-0 z-40 lg:static",
-        !isOpen && "-translate-x-full lg:translate-x-0",
+        "border-r-gray-3 h-full w-full max-w-60 flex-1 border-r px-4 py-3 transition-all duration-300 ease-in-out md:max-w-64",
+        "bg-gray-1 fixed top-13 left-0 z-40 md:static",
+        !isOpen && "-translate-x-full md:translate-x-0",
       )}
     >
       {categorieLinks.map(({ name, path, iconName }) => (

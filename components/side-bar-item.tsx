@@ -11,7 +11,7 @@ import {
   Palette,
 } from "@phosphor-icons/react/dist/ssr";
 import { cn } from "@/lib/utils";
-import styles from "@/app/styles.module.css";
+import { motion } from "motion/react";
 
 type TSideBarItemProps = {
   name: string;
@@ -39,72 +39,35 @@ export default function SideBarItem({
   const Icon = icons[iconName];
 
   return (
-    <Link href={path} className="group flex items-center gap-x-3 p-2">
-      <IconWrapper isActive={isActive}>
+    <Link
+      href={path}
+      className={cn(
+        "relative flex items-center gap-x-2 rounded-lg px-2.5 py-2",
+      )}
+    >
+      <div>
         <Icon
           className={cn(
-            "text-gray-9 group-hover:text-gray-12 transition-colors duration-300 ease-out",
+            "text-gray-9 group-hover:text-gray-12 transition-colors duration-150 ease-out",
             { "text-gray-12": isActive },
           )}
-          size={20}
+          size={18}
         />
-      </IconWrapper>
+      </div>
       <span
         className={cn(
-          "text-gray-9 group-hover:text-gray-12 transition-colors duration-150 ease-out",
+          "text-gray-10 group-hover:text-gray-12 transition-colors duration-150 ease-out",
           { "text-gray-12": isActive },
         )}
       >
         {name}
       </span>
-    </Link>
-  );
-}
-
-function IconWrapper({
-  children,
-  isActive,
-}: {
-  children: React.ReactNode;
-  isActive?: boolean;
-}) {
-  return (
-    <div
-      className={cn(
-        "inset-shadow-icon-bottom inset-shadow-gray-12/15 bg-gray-1 shadow-gray-12/20 group-hover:inset-shadow-gray-12/30 rounded-xl transition-all duration-300 ease-out group-hover:shadow",
-        {
-          "inset-shadow-gray-12/30 shadow": isActive,
-        },
+      {isActive && (
+        <motion.div
+          className="bg-gray-2 absolute inset-0 -z-10 rounded-lg"
+          layoutId="sidebar-item-bg"
+        />
       )}
-    >
-      <div
-        className={cn(
-          "inset-shadow-gray-12/90 group-hover:inset-shadow-icon-highlight rounded-xl transition-all duration-300 ease-out",
-          {
-            "inset-shadow-icon-highlight": isActive,
-          },
-        )}
-      >
-        <div
-          className={cn(
-            "inset-shadow-icon-top inset-shadow-gray-12/15 group-hover:inset-shadow-gray-12/30 rounded-xl transition-colors duration-300 ease-out",
-            {
-              "inset-shadow-gray-12/30": isActive,
-            },
-          )}
-        >
-          <div
-            className={cn(
-              "border-gray-12/10 group-hover:border-gray-12/25 rounded-xl border p-1.5 transition-colors duration-300 ease-out",
-              {
-                "border-gray-12/25": isActive,
-              },
-            )}
-          >
-            <div className={isActive ? styles.iconMask : ""}>{children}</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </Link>
   );
 }
