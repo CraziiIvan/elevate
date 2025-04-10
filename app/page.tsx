@@ -15,9 +15,9 @@ export default async function Home() {
   const editorChoiceTools = await getEditorChoiceTools();
 
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col px-6">
       <Hero />
-      <div className="xs:grid-cols-2 grid grid-cols-1 p-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="xs:grid-cols-2 grid grid-cols-1 py-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {featuredTools &&
           featuredTools.map((tool) => (
             <ToolCard
@@ -26,11 +26,10 @@ export default async function Home() {
               logoUrl={tool.logoUrl}
               name={tool.name}
               description={tool.description}
-              featured={true}
             />
           ))}
       </div>
-      <div className="space-y-4 p-5">
+      <div className="space-y-4 py-5">
         <h2 className="text-xl font-medium">Newly Added</h2>
         <div className="xs:grid-cols-2 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {newlyAddedTools.map((tool) => (

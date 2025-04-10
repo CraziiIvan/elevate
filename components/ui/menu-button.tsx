@@ -15,14 +15,14 @@ const MenuButton = ({ className }: { className?: string }) => {
     >
       <span
         className={cn(
-          "bg-gray-10 absolute top-1/2 left-1/2 h-px w-5 -translate-x-1/2 -translate-y-1/2 transform transition-transform duration-200 ease-out",
-          isOpen ? "rotate-45" : "-translate-y-1.5",
+          "bg-gray-10 absolute top-1/2 left-1/2 h-px w-4 -translate-x-1/2 -translate-y-1/2 transform transition-transform duration-200 ease-out",
+          isOpen ? "rotate-45" : "-translate-y-1",
         )}
       />
       <span
         className={cn(
-          "bg-gray-10 absolute top-1/2 left-1/2 h-px w-5 -translate-x-1/2 -translate-y-1/2 transform transition-transform duration-200 ease-out",
-          isOpen ? "-rotate-45" : "translate-y-1.5",
+          "bg-gray-10 absolute top-1/2 left-1/2 h-px w-4 -translate-x-1/2 -translate-y-1/2 transform transition-transform duration-200 ease-out",
+          isOpen ? "-rotate-45" : "translate-y-1",
         )}
       />
     </button>
