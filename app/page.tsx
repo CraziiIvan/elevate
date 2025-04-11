@@ -24,12 +24,14 @@ export default async function Home() {
               key={tool.toolId}
               toolId={tool.toolId}
               logoUrl={tool.logoUrl}
+              bgUrl={tool.bgUrl}
               name={tool.name}
               description={tool.description}
+              featured={true}
             />
           ))}
       </div>
-      <div className="space-y-4 py-5">
+      {/* <div className="space-y-4 py-5">
         <h2 className="text-xl font-medium">Newly Added</h2>
         <div className="xs:grid-cols-2 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {newlyAddedTools.map((tool) => (
@@ -42,7 +44,7 @@ export default async function Home() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
       <div className="space-y-4 p-5">
         <h2 className="text-xl font-medium">Choices</h2>
         <div className="xs:grid-cols-2 grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">

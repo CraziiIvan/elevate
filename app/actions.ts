@@ -12,6 +12,7 @@ export async function getFeaturedTools() {
       description: tools.description,
       websiteUrl: tools.websiteUrl,
       logoUrl: tools.logoUrl,
+      bgUrl: tools.bgUrl,
     })
     .from(tools)
     .where(eq(tools.featured, true))
