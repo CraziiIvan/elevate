@@ -19,8 +19,6 @@ export default async function ToolCard({
   description,
   featured,
 }: TToolCardProps) {
-  console.log(bgUrl);
-
   return (
     <div className="group cursor-pointer -space-y-4">
       <div className="relative mx-1 aspect-video overflow-hidden rounded duration-150 ease-out group-hover:mx-0">

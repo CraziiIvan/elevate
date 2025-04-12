@@ -50,7 +50,7 @@ export const submissions = pgTable(
   {
     submissionId: serial("submission_id").primaryKey(),
     submittedByEmail: varchar("submitted_by_email", { length: 100 }).notNull(),
-    websiteUrl: varchar("website_url", { length: 255 }).notNull(), // Allow duplicates
+    websiteUrl: varchar("website_url", { length: 255 }).notNull(),
     submittedAt: timestamp("submitted_at", { withTimezone: true }).defaultNow(),
   },
   (table) => ({

@@ -1,0 +1,1 @@
+ALTER TABLE "tools" ADD COLUMN "bg_url" varchar(255);
